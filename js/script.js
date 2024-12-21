@@ -193,4 +193,69 @@ $(document).ready(function () {
       autoclose: true,
     })
     .datepicker("setDate", new Date());
+
+  if ($(".js-number-counter").length) {
+    // Function to animate the counter
+    const animateCounter = (element, targetValue, duration) => {
+      const startValue = parseInt(element.textContent, 10) || 0;
+      const increment = (targetValue - startValue) / (duration / 16); // ~60fps
+      let currentValue = startValue;
+
+      const updateCounter = () => {
+        currentValue += increment;
+        if (
+          (increment > 0 && currentValue >= targetValue) ||
+          (increment < 0 && currentValue <= targetValue)
+        ) {
+          element.textContent = Math.round(targetValue);
+        } else {
+          element.textContent = Math.round(currentValue);
+          requestAnimationFrame(updateCounter);
+        }
+      };
+
+      updateCounter();
+    };
+
+    // Function to check if element is in the viewport
+    const isElementInViewport = (el) => {
+      const rect = el.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <=
+          (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <=
+          (window.innerWidth || document.documentElement.clientWidth)
+      );
+    };
+
+    // Trigger animation when scrolling
+    const debounce = (func, delay) => {
+      let timeout;
+      return function (...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), delay);
+      };
+    };
+    document.addEventListener(
+      "scroll",
+      debounce(() => {
+        const counters = document.querySelectorAll(".js-number-counter");
+        counters.forEach((counter) => {
+          if (
+            isElementInViewport(counter) &&
+            !counter.classList.contains("animated")
+          ) {
+            const targetValue = parseInt(
+              counter.getAttribute("data-target"),
+              10
+            );
+            animateCounter(counter, targetValue, 2000); // Animate over 2 seconds
+            counter.classList.add("animated"); // Mark as animated
+          }
+        });
+      }, 100)
+    );
+  }
 });

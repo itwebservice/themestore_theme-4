@@ -563,6 +563,12 @@ body {
   width: 80px;
   border-radius: 4px;
 }
+.c-section .heading.left {
+  text-align: left;
+}
+.c-section .heading.left::after {
+  left: 0;
+}
 .c-section.is-filled {
   background-color: #2e4d48;
   margin: 30px 0;
@@ -572,8 +578,9 @@ body {
   color: #fff;
 }
 .c-section.ourStory {
-  background-color: #fff5ec;
+  background-color: #f8f6f4;
   padding: 90px 0;
+  margin: 80px 0;
 }
 .c-section.ourStory::before {
   background-color: #2e4d48;
@@ -603,6 +610,7 @@ body {
 }
 .c-section.ourGallery {
   background: url("../images/our-gallery-bg.webp") no-repeat;
+  margin: 80px 0;
 }
 .c-section.ourGallery .heading {
   color: #fff;
@@ -610,6 +618,9 @@ body {
 .c-section.ourGallery .card-image img {
   border-radius: 20px;
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.49);
+}
+.c-section.ourPartner {
+  margin: 80px 0;
 }
 
 @media (max-width: 960px) {
@@ -904,14 +915,11 @@ body {
   position: relative;
   width: 100%;
 }
-.c-customerCard .card-wrapper {
-  background-color: #fff5ec;
-  padding: 20px;
-}
 .c-customerCard .card-wrapper-head {
   height: 150px;
   position: relative;
   text-align: right;
+  padding-right: 40px;
 }
 .c-customerCard .card-wrapper-head img {
   display: inline-block;
@@ -922,11 +930,11 @@ body {
 .c-customerCard .card-wrapper-head .info {
   background-color: #91a78c;
   height: 80px;
-  left: -44px;
+  left: -22px;
   padding: 20px;
   position: absolute;
   top: 30px;
-  width: 260px;
+  width: 240px;
   border-radius: 0 30px 0 0;
 }
 .c-customerCard .card-wrapper-head .info::before {
@@ -938,13 +946,28 @@ body {
   left: 0;
   position: absolute;
   top: 80px;
-  width: 0px;
+  width: 0;
   transform: rotate(0deg);
 }
 .c-customerCard .card-wrapper-body {
-  padding: 20px 12px 12px;
+  background-color: #f8f6f4;
+  padding: 104px 40px 40px;
+  margin-top: -82px;
+  border-radius: 6px;
 }
 
+@media (max-width: 960px) {
+  .c-customerCard .card-wrapper-head {
+    padding-right: 20px;
+  }
+  .c-customerCard .card-wrapper-head img {
+    height: 100px;
+    width: 100px;
+  }
+  .c-customerCard .card-wrapper-body {
+    padding: 70px 24px 24px;
+  }
+}
 .c-seasonCard {
   background-color: #f8f6f4;
   position: relative;
@@ -1240,10 +1263,10 @@ body {
   min-height: 100px;
 }
 
-.text-ellipsis-3 {
+.text-ellipsis-4 {
   display: -webkit-box; /* Flexible layout with the box model */
   -webkit-box-orient: vertical; /* Vertical orientation for the box */
-  -webkit-line-clamp: 3; /* Limit to 3 lines */
+  -webkit-line-clamp: 4; /* Limit to 3 lines */
   overflow: hidden; /* Hide overflowed content */
   text-overflow: ellipsis; /* Show ellipsis for truncated text */
 }
