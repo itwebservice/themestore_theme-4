@@ -2921,6 +2921,357 @@
     </footer>
     <!-- ***** Footer Section Section ***** -->
 
+    <!-- ***** Hotel :: Traveller information Modal ***** -->
+    <div
+      class="modal fade"
+      id="travellerInformationHotel"
+      tabindex="-1"
+      aria-labelledby="travellerInformationHotelLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Travellers Information</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <span class="d-block fs-7 text-secondary mb-1"> Adults </span>
+              <input
+                class="form-control c-input transparent"
+                type="number"
+                placeholder="1"
+                min="1"
+              />
+            </div>
+
+            <div class="mb-2">
+              <span class="d-block fs-7 text-secondary mb-1"> Children </span>
+              <input
+                class="form-control c-input transparent mb-2"
+                type="number"
+                placeholder="0"
+                min="0"
+              />
+              <div class="d-flex gap-2">
+                <div class="flex-grow-1">
+                  <select class="c-select fs-7">
+                    <option>0 Years old</option>
+                    <option>1 Years old</option>
+                    <option>2 Years old</option>
+                    <option>3 Years old</option>
+                  </select>
+                </div>
+                <div class="flex-grow-1">
+                  <select class="c-select fs-7">
+                    <option>0 Years old</option>
+                    <option>1 Years old</option>
+                    <option>2 Years old</option>
+                    <option>3 Years old</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-1">
+              <span class="d-block fs-7 text-secondary mb-1"> Rooms </span>
+              <input
+                class="form-control c-input transparent"
+                type="number"
+                placeholder="1"
+                min="1"
+              />
+            </div>
+
+            <div class="text-center">
+              <button class="btn c-button btn-lg" data-bs-dismiss="modal">
+                Add
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ***** Hotel :: Traveller information Modal End ***** -->
+
+    <!-- ***** Flight :: Traveller information Modal ***** -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Travellers Information</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <span class="fs-7 fw-medium d-block text-uppercase"
+                >Adults (12y +)</span
+              >
+              <span class="fs-7 fw-medium text-secondary d-block mb-2"
+                >On the day of travel</span
+              >
+              <input
+                class="form-control c-input transparent"
+                type="number"
+                placeholder="1"
+                min="1"
+                max="10"
+              />
+            </div>
+            <div class="mb-3">
+              <span class="fs-7 fw-medium d-block text-uppercase"
+                >CHILDREN (2y - 12y)</span
+              >
+              <span class="fs-7 fw-medium text-secondary d-block mb-2"
+                >On the day of travel</span
+              >
+              <input
+                class="form-control c-input transparent"
+                type="number"
+                placeholder="1"
+                min="1"
+                max="10"
+              />
+            </div>
+            <div class="mb-3">
+              <span class="fs-7 fw-medium d-block text-uppercase"
+                >INFANTS (below 2y)</span
+              >
+              <span class="fs-7 fw-medium text-secondary d-block mb-2"
+                >On the day of travel</span
+              >
+              <input
+                class="form-control c-input transparent"
+                type="number"
+                placeholder="1"
+                min="1"
+                max="10"
+              />
+            </div>
+
+            <span class="fs-7 fw-medium d-block text-uppercase"
+              >CHOOSE TRAVEL CLASS
+            </span>
+            <div class="d-flex flex-row mb-3">
+              <div class="form-check flex-fill">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="travelClass"
+                  id="economyClass"
+                  checked
+                />
+                <label class="form-check-label fs-7" for="economyClass">
+                  Economy
+                </label>
+              </div>
+              <div class="form-check flex-fill">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="travelClass"
+                  id="firstClass"
+                />
+                <label class="form-check-label fs-7" for="firstClass">
+                  First Class
+                </label>
+              </div>
+              <div class="form-check flex-fill">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="travelClass"
+                  id="businessClass"
+                />
+                <label class="form-check-label fs-7" for="businessClass">
+                  Business
+                </label>
+              </div>
+            </div>
+            <div class="text-center">
+              <button class="btn c-button btn-lg" data-bs-dismiss="modal">
+                Add
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ***** Flight :: Traveller information Modal End ***** -->
+
+    <!-- ***** Group Tour :: Traveller information Modal ***** -->
+    <div
+      class="modal fade"
+      id="travellerInformationGroupTour"
+      tabindex="-1"
+      aria-labelledby="travellerInformationGroupTourLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Travellers Information</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <span class="fs-7 fw-medium d-block text-uppercase"
+                >Adults (12y +)</span
+              >
+              <span class="fs-7 fw-medium text-secondary d-block mb-2"
+                >On the day of travel</span
+              >
+              <input
+                class="form-control c-input transparent"
+                type="number"
+                placeholder="1"
+                min="1"
+                max="10"
+              />
+            </div>
+            <div class="mb-3">
+              <span class="fs-7 fw-medium d-block text-uppercase"
+                >CHILDREN (2y - 12y)</span
+              >
+              <span class="fs-7 fw-medium text-secondary d-block mb-2"
+                >On the day of travel</span
+              >
+              <input
+                class="form-control c-input transparent"
+                type="number"
+                placeholder="1"
+                min="1"
+                max="10"
+              />
+            </div>
+            <div class="mb-3">
+              <span class="fs-7 fw-medium d-block text-uppercase"
+                >INFANTS (below 2y)</span
+              >
+              <span class="fs-7 fw-medium text-secondary d-block mb-2"
+                >On the day of travel</span
+              >
+              <input
+                class="form-control c-input transparent"
+                type="number"
+                placeholder="1"
+                min="1"
+                max="10"
+              />
+            </div>
+
+            <div class="text-center">
+              <button class="btn c-button btn-lg" data-bs-dismiss="modal">
+                Add
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ***** Group Tour :: Traveller information Modal End ***** -->
+
+    <!-- ***** Holiday :: Traveller information Modal ***** -->
+    <div
+      class="modal fade"
+      id="travellerInformationHoliday"
+      tabindex="-1"
+      aria-labelledby="travellerInformationHolidayLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Travellers Information</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <span class="d-block fs-7 text-secondary mb-1"> Adults </span>
+              <input
+                class="form-control c-input transparent"
+                type="number"
+                placeholder="1"
+                min="1"
+              />
+            </div>
+
+            <div class="mb-2">
+              <span class="d-block fs-7 text-secondary mb-1"> Children </span>
+              <input
+                class="form-control c-input transparent mb-2"
+                type="number"
+                placeholder="0"
+                min="0"
+              />
+              <div class="d-flex gap-2">
+                <div class="flex-grow-1">
+                  <select class="c-select fs-7">
+                    <option>0 Years old</option>
+                    <option>1 Years old</option>
+                    <option>2 Years old</option>
+                    <option>3 Years old</option>
+                  </select>
+                </div>
+                <div class="flex-grow-1">
+                  <select class="c-select fs-7">
+                    <option>0 Years old</option>
+                    <option>1 Years old</option>
+                    <option>2 Years old</option>
+                    <option>3 Years old</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-1">
+              <span class="d-block fs-7 text-secondary mb-1"> Rooms </span>
+              <input
+                class="form-control c-input transparent"
+                type="number"
+                placeholder="1"
+                min="1"
+              />
+            </div>
+
+            <div class="text-center">
+              <button class="btn c-button btn-lg" data-bs-dismiss="modal">
+                Add
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ***** Holiday :: Traveller information Modal End ***** -->
+
     <script src="./js/jquery-3.6.3.min.js" crossorigin="anonymous"></script>
     <script src="./js/bootstrap.bundle.min.js" async defer></script>
     <script src="./js/owl.carousel.min.js"></script>
